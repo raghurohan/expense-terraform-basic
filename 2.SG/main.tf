@@ -44,14 +44,6 @@ module "ansible_sg" {
     environment = var.environment
    
 }
-# RDS SECURITY GROUP
-module "rds_sg" {
-    source = "git::https://github.com/raghuatharva/terraform-aws-security-group.git?ref=main"
-    vpc_id = local.vpc_id
-    sg_name = "rds"
-    project_name = var.project
-    environment = var.environment
-}
 
 #ingress rules for security groups
 resource "aws_security_group_rule" "mysql_ingress" {
