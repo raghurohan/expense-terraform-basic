@@ -7,6 +7,5 @@ source = "../../3.terraform-aws-vpc"
   environment    = var.environment
   public_cidr   = var.public_cidr
   private_cidr  = var.private_cidr
-  database_cidr = var.database_cidr
   is_peering_required = var.is_peering_required
 }

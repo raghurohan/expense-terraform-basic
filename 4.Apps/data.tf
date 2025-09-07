@@ -25,9 +25,7 @@ data "aws_ssm_parameter" "backend_sg" {
   name = "/${var.project}/${var.environment}/backend_sg_id"
 }
 
-data "aws_ssm_parameter" "mysql_subnet_id" {
-  name = "/${var.project}/${var.environment}/database_subnet_ids"
-}
+
 
 data "aws_ssm_parameter" "mysql_sg" {
   name = "/${var.project}/${var.environment}/mysql_sg_id"

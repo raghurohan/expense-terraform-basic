@@ -3,7 +3,7 @@ module "mysql" {
 
   ami                    = local.ami
   instance_type          = "t2.micro"
-  subnet_id              = local.mysql_subnet_id
+  subnet_id              = local.private_subnet_id
   vpc_security_group_ids = [local.mysql_sg]
   name                   = "${local.resource_name}-mysql"
 

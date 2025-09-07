@@ -3,7 +3,6 @@ locals {
   ami               = data.aws_ami.join_devops.id
   public_subnet_id  = split(",", data.aws_ssm_parameter.public_subnet_id.value)[0]
   private_subnet_id = split(",", data.aws_ssm_parameter.private_subnet_id.value)[0]
-  mysql_subnet_id   = split(",", data.aws_ssm_parameter.mysql_subnet_id.value)[0]
   frontend_sg       = data.aws_ssm_parameter.frontend_sg.value
   backend_sg        = data.aws_ssm_parameter.backend_sg.value
   mysql_sg          = data.aws_ssm_parameter.mysql_sg.value

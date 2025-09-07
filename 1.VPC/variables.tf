@@ -29,13 +29,10 @@ variable "private_cidr" {
   default = ["10.0.3.0/24", "10.0.4.0/24"]
 }
 
-variable "database_cidr" {
-  type    = list(any)
-  default = ["10.0.5.0/24", "10.0.6.0/24"]
-}
+
 
 variable "is_peering_required" {
   description = "Flag to enable/disable peering connection"
   type        = bool
-  default     = true
+  default     = false
 }
